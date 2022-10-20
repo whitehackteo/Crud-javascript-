@@ -2,7 +2,7 @@
 
 # Ascibersecurity 
 
-Pagina web desarrollada en html5 y css realizado para proyecto 
+Pagina web desarrollada para el proyecto de bootcamp de fullstack en html5 y css y javascript realizado para proyecto 
 de Crud-Javascript.
 
 ## Badges
