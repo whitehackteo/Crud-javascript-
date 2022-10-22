@@ -8,6 +8,8 @@ const objEstudiante = {
     curso: ''
 }
 
+updateAfterPageRefresh();
+
 let editando = false;
 
 const formulario = document.querySelector('#formulario');
@@ -49,6 +51,7 @@ function agregarEstudiante() {
     limpiarObjeto();
 
     localStorage.setItem('listaEstudiantes', JSON.stringify(listaEstudiantes));
+
 }
 
 function limpiarObjeto(){
@@ -144,3 +147,25 @@ function limpiarHTML(){
         divEstudiantes.removeChild(divEstudiantes.firstChild);
     }
 }
+
+function updateAfterPageRefresh(){
+    if(localStorage.getItem("listaEstudiantes")==null){
+        console.log("No hay nada almacenado.")
+    }
+    else{
+        listaEstudiantes = JSON.parse(localStorage.getItem("listaEstudiantes"));
+        for (let index = 0; index < listaEstudiantes.length; index++) {
+            let id = listaEstudiantes[index].id;
+            let nombre = listaEstudiantes[index].nombre;
+            let apellido = listaEstudiantes[index].apellido;
+            let curso = listaEstudiantes[index].curso;
+        }
+    }
+    
+}
+
+(() => {
+    listaEstudiantes = JSON.parse(localStorage.getItem("listaEstudiantes")) || [];
+    console.log(listaEstudiantes);
+    mostrarEstudiantes();
+  })();
