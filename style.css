@@ -76,7 +76,7 @@ header .textos-header{
 }
 
 .div-titulo h1{
-    font-size: 5em;
+    font-size: 50px;
     font-weight: 500;
     color: blue;
     letter-spacing: 5px;
@@ -349,6 +349,17 @@ footer{
     text-align: center;
   }
   @media screen and (max-width: 900px) {
+    header{
+      background-position: center;
+      width: 90%;
+    }
+    .div-titulo{
+      width: 90%;
+      font-size: 60px;
+    }
+    .div-titulo h1{
+      width: 90%;
+    }
     footer{
       position: relative;
       bottom: 0px;
