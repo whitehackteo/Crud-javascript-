@@ -30,7 +30,7 @@ nav{
 }
 
 nav > a{
-    color: #fff;
+    color: rgb(27, 11, 250);
     font-weight: 300;
     text-decoration: none;
     margin-right: 10px;
@@ -66,6 +66,7 @@ header .textos-header{
     bottom: 0;
     width: 100%;
 }
+
 
 .div-titulo{
     width: 100%;
@@ -135,6 +136,7 @@ h1:hover {
     padding: 10px 10px;
     margin: 10px 10px;
     cursor: pointer;
+    border-radius: 10px;
 }
 
 .contenedor .div-listado{
@@ -348,18 +350,45 @@ footer{
   .titulo-final{
     text-align: center;
   }
-  @media screen and (max-width: 900px) {
+  
+  @media (max-width: 767px) {
+    
     header{
       background-position: center;
-      width: 90%;
+      width: auto;
+      display: flexbox;
     }
     .div-titulo{
-      width: 90%;
-      font-size: 60px;
+      width: 100%;
     }
     .div-titulo h1{
-      width: 90%;
+      font-size: 25px;
+      font-weight: 500;
+      letter-spacing: 5px;
+
     }
+    .contenedor .div-formulario{
+      width: 100%;
+      
+    }
+    .contenedor .div-formulario form input,
+    .contenedor .div-formulario form button{
+      width: 90%;
+      
+    }
+    .contenedor .div-formulario h2{
+      margin-top: 10px;
+      font-weight: 300;
+      font-size: 1em;
+    }
+    
+    .contenedor .div-listado{
+      width: 55%;
+      height: calc(50% - 50px);
+     
+    }
+
+  
     footer{
       position: relative;
       bottom: 0px;
@@ -371,4 +400,5 @@ footer{
     .main-content .box{
       margin: 5px 0;
     }
-  }
+  }  
+ 
